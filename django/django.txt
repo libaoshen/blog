@@ -1,0 +1,7 @@
+django命令
+
+创建app
+python manage.py startapp appname
+
+同步数据库
+python manage.py sycndb
