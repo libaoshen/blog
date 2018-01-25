@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索
+        {% if userList %}
+            结果
+        {% endif %}
+    </title>
+</head>
+<body>
+    <form action="./search2" method="post">
+        <table>
+            {{ form.as_table}}
+        </table>
+        <input type="submit" value="提交"></input>
+    </form>
+</body>
+</html>

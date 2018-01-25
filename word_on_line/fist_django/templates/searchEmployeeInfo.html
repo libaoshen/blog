@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索
+        {% if userList %}
+            结果
+        {% endif %}
+    </title>
+</head>
+<body>
+    <form action="/search" method="get">
+        <input name="query" value="{{  query }}"/>
+        <input type="submit" value="提交"></input>
+    </form>
+
+    {% if userList %}
+        <table style="border:1px solid gray">
+            <tr>
+                <td>姓名</td>
+                <td>年龄</td>
+                <td>性别</td>
+                <td>职务</td>
+                <td>家乡</td>
+                <td>爱好</td>
+            </tr>
+            {% if userList  %}
+
+            {% endif %}
+            {% for user in userList %}
+                <tr>
+                    <td>{{user.name}}</td>
+                    <td>{{user.age}}</td>
+                    <td>{{user.sex}}</td>
+                    <td>{{user.job}}</td>
+                    <td>{{user.where}}</td>
+                    <td>{{user.hobby}}</td>
+                </tr>
+            {% endfor %}
+
+            {% if user.name %}
+                <tr>
+                    <td>name</td>
+                    <td>{{user.name}}</td>
+                </tr>
+            {% endif %}
+        </table>
+    {% endif %}
+
+</body>
+</html>

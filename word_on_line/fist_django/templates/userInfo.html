@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户信息</title>
+</head>
+<body>
+    <table style="border:1px solid gray">
+        {% if user.name %}
+            <tr>
+                <td>name</td>
+                <td>{{user.name}}</td>
+            </tr>
+        {% endif %}
+
+        <tr>
+            <td>age</td>
+            <td>{{user.age}}</td>
+        </tr>
+        <tr>
+            <td>sex</td>
+            <td>{{user.sex}}</td>
+        </tr>
+        <tr>
+            <td>where</td>
+            <td>{{user.where}}</td>
+        </tr>
+        <tr>
+            <td>job</td>
+            <td>{{user.job}}</td>
+        </tr>
+        <tr>
+            <td>hobby</td>
+            <td>{{user.hobby}}</td>
+        </tr>
+    </table>
+</body>
+</html>
