@@ -14,10 +14,14 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from index import views
+from index import views as vi
+from login import views as vl
 from WordOnLine import settings
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^index/', views.toIndex),
-    ]
+    url(r'^index/(\d{1,3})$', vi.toIndex),
+    url(r'^login/', vl.toLogin),
+    url(r'^doLogin/', vl.login),
+    url(r'^logout/', vl.logout),
+]
